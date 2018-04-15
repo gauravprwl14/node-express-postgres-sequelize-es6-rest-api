@@ -26,6 +26,24 @@
         "test:check-coverage": "yarn test:coverage && istanbul check-coverage",
         "report-coverage": "coveralls < ./coverage/lcov.info"
     },
+    "repository": {
+        "type": "git",
+        "url": "git@github.com:gauravprwl14/node-express-postgres-sequelize-es6-rest-api.git"
+    },
+    "keywords": [
+        "express",
+        "node",
+        "node.js",
+        "postgreSQL",
+        "sequelize",
+        "es6",
+        "mocha",
+        "istanbul",
+        "REST",
+        "API",
+        "boilerplate",
+        "starter-kit"
+    ],
     "dependencies": {
         "babel-polyfill": "6.26.0",
         "bluebird": "3.5.1",
