@@ -20,7 +20,6 @@ class ExtendableError extends Error {
  * @extends ExtendableError
  */
 class APIError extends ExtendableError {
-
     /**
      * Creates an API error.
      * @param {string} message - Error message.
