@@ -1,3 +1,4 @@
+import 'babel-polyfill';
 import config from './config/config';
 import app from './config/express';
 /* eslint-disable no-unused-vars */

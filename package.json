@@ -1,8 +1,7 @@
 {
     "name": "express-postgresql-sequelize-es6-rest-api",
     "version": "0.0.1",
-    "description":
-        "A Boilerplate application for building REST APIs using express, sequelize in ES6 with code coverage",
+    "description": "A Boilerplate application for building REST APIs using express, sequelize in ES6 with code coverage",
     "author": "Gaurav Porwal <gauravprwl14@gmail.com>",
     "main": "index.js",
     "private": false,
@@ -18,11 +17,9 @@
         "lint": "esw *.js server config --color",
         "lint:watch": "yarn lint -- --watch",
         "beautify": "es-beautifier -u -c .eslintrc.js *.js server config",
-        "test":
-            "cross-env NODE_ENV=test ./node_modules/.bin/mocha --ui bdd --reporter spec --colors --compilers js:babel-core/register server/tests --recursive",
+        "test": "cross-env NODE_ENV=test, PG_DB=test-express-postgresql-sequelize-es6-rest-api ./node_modules/.bin/mocha --ui bdd --reporter spec --colors --compilers js:babel-core/register server/tests --recursive",
         "test:watch": "yarn test -- --watch",
-        "test:coverage":
-            "cross-env NODE_ENV=test ./node_modules/.bin/istanbul cover _mocha -- --ui bdd --reporter spec --colors --compilers js:babel-core/register server/tests --recursive",
+        "test:coverage": "cross-env NODE_ENV=test ./node_modules/.bin/istanbul cover _mocha -- --ui bdd --reporter spec --colors --compilers js:babel-core/register server/tests --recursive",
         "test:check-coverage": "yarn test:coverage && istanbul check-coverage",
         "report-coverage": "coveralls < ./coverage/lcov.info"
     },
@@ -79,6 +76,7 @@
         "babel-core": "6.26.0",
         "babel-plugin-add-module-exports": "0.2.1",
         "babel-preset-env": "1.6.1",
+        "babel-preset-es2017": "6.24.1",
         "babel-preset-stage-2": "6.24.1",
         "chai": "4.1.2",
         "commitizen": "2.9.6",
@@ -99,8 +97,14 @@
         "validate-commit-msg": "^2.6.1"
     },
     "babel": {
-        "presets": ["env", "stage-2"],
-        "plugins": ["add-module-exports"]
+        "presets": [
+            "env",
+            "es2017",
+            "stage-2"
+        ],
+        "plugins": [
+            "add-module-exports"
+        ]
     },
     "license": "MIT",
     "config": {
