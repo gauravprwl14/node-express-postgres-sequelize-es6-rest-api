@@ -61,17 +61,11 @@ DEBUG=express-postgresql-sequelize-es6-rest-api:* yarn start
 Tests:
 
 ```sh
-# Run tests written in ES6
+# Run tests written in ES6 and see the code coverage
 yarn test
-
-# Run test along with code coverage
-yarn test:coverage
 
 # Run tests on file change
 yarn test:watch
-
-# Run tests enforcing code coverage (configured via .istanbul.yml)
-yarn test:check-coverage
 ```
 
 Lint:

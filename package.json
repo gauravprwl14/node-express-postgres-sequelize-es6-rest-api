@@ -1,8 +1,7 @@
 {
     "name": "express-postgresql-sequelize-es6-rest-api",
     "version": "0.0.1",
-    "description":
-        "A Boilerplate application for building REST APIs using express, sequelize in ES6 with code coverage",
+    "description": "A Boilerplate application for building REST APIs using express, sequelize in ES6 with code coverage",
     "author": "Gaurav Porwal <gauravprwl14@gmail.com>",
     "main": "index.js",
     "private": false,
@@ -19,11 +18,7 @@
         "lint:watch": "yarn lint -- --watch",
         "beautify": "es-beautifier -u -c .eslintrc.js *.js server config",
         "test": "gulp mocha",
-        "test:watch": "yarn test -- --watch",
-        "test:coverage":
-            "cross-env NODE_ENV=test ./node_modules/.bin/istanbul cover _mocha -- --ui bdd --reporter spec --colors --compilers js:babel-core/register server/tests --recursive",
-        "test:check-coverage": "yarn test:coverage && istanbul check-coverage",
-        "report-coverage": "coveralls < ./coverage/lcov.info"
+        "test:watch": "yarn test -- --watch"
     },
     "repository": {
         "type": "git",
