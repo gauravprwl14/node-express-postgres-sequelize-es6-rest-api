@@ -6,18 +6,19 @@ const User = db.User;
 /**
  * Load user and append to req.
  */
-function load(req, res, next, id) {
-    User.findById(id)
-        .then((user) => {
-            if (!user) {
-                const e = new Error('User does not exist');
-                e.status = httpStatus.NOT_FOUND;
-                return next(e);
-            }
-            req.user = user; // eslint-disable-line no-param-reassign
-            return next();
-        })
-        .catch(e => next(e));
+async function load(req, res, next, id) {
+    try {
+        const userFoundResponse = await User.findById(id);
+        if (!userFoundResponse) {
+            const e = new Error('User does not exist');
+            e.status = httpStatus.NOT_FOUND;
+            return next(e);
+        }
+        req.user = userFoundResponse; // eslint-disable-line no-param-reassign
+        return next();
+    } catch (error) {
+        return next(error);
+    }
 }
 
 /**
