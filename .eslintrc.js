@@ -11,6 +11,9 @@ module.exports = {
                 allow: ['warn', 'error', 'info'],
             },
         ],
+        // Every time we can't de-structure an object or array,
+        //  as sometimes we want to reference object and array
+        'prefer-destructuring': 'off',
     },
     parserOptions: {
         sourceType: 'module',
