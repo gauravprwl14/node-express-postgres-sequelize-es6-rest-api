@@ -31,6 +31,13 @@ fs
         db[model.name] = model;
     });
 
+// calling all the associate function, in order to make the association between the models
+Object.keys(db).forEach((modelName) => {
+    if (db[modelName].associate) {
+        db[modelName].associate(db);
+    }
+});
+
 // Synchronizing any model changes with database.
 sequelize.sync().then((err) => {
     if (err) console.error('An error occured %j', err);
